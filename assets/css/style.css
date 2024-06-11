@@ -1,19 +1,71 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin:0;
+}
+
 #header, #apresentacao, #funcionalidades, #prototipos, #fomulario{
     width: 100vw;
     height: 100vh;
 }
 
-#header{
-    display: grid;
-    grid-template-columns: repeat(2,1fr),3fr,repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr),3fr,repeat(2,1fr);
+.titulo{
+    position: absolute;
+    display: table;
+    margin: 0 auto;
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
 }
 
 #apresentacao{
-    display: flex;
     flex-direction: row;
+    height: fit-content;
 }
 
-#apresentacao img{
-    border-radius: 50%;
+h1,h2,h3{
+    display: block;
+    text-align: center;
+    margin: 3rem;
+    font-size: 60px;
 }
+p{
+    display: block;
+    text-align: center;
+    margin: 5rem;
+    font-size: 30px;
+}
+
+.intro.txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(245, 222, 179, 0);
+}
+#apresentacao img{
+    /* border-radius: 50%; */
+    z-index: -10;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+}
+
+.parallax {
+    background-image: url("../img/logo.jpeg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;}
