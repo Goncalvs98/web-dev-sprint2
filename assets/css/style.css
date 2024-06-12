@@ -83,25 +83,18 @@ p{
     height: 20rem;
 }
 
-.last-line{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    height: fit-content;
-    text-align: center;
-    place-items: center;
-    margin-top: 4rem;
-}
-
 .first-lines{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
     height: fit-content;
     text-align: center;
     place-items: center;
 }
-li{
+
+.first-lines li{
     list-style: none;
+    gap: 4rem;
     background-color: rgb(102, 102, 102);
     color: rgb(240, 240, 240);
     padding: 2rem;
@@ -190,3 +183,4 @@ li>h2{
     display: grid;
     gap: 2rem;
 }
+
