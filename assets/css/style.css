@@ -85,7 +85,7 @@ p{
 
 .first-lines{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 1.5rem;
     height: fit-content;
     text-align: center;
@@ -96,15 +96,53 @@ p{
     list-style: none;
     gap: 4rem;
     background-color: rgb(102, 102, 102);
-    color: rgb(240, 240, 240);
+    color: rgb(21, 21, 29);
     padding: 2rem;
     height: 13rem;
     width: 26rem;
-    opacity: 0.65;
-    transition: ease, 0.5s;
+    opacity: 0.95;
+    transition: ease, 0.1s;
     font-size: 20px;
     border-radius: 25px;
 }
+ 
+.first-lines  img{
+    /* display: contents; */
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border-radius: 25px;
+ }
+ 
+ .first-lines li {
+    position: relative; /* Adiciona posicionamento relativo para que a imagem fique relativa a este elemento */
+}
+
+.first-lines li img {
+    position: absolute; /* Define a posição absoluta para que a imagem possa ser posicionada dentro do elemento pai */
+    top: 0; /* Alinha a imagem ao topo do elemento pai */
+    left: 50%; /* Move a imagem para a metade da largura do elemento pai */
+    transform: translateX(-50%); /* Ajusta a posição horizontal da imagem para que fique centralizada */
+}
+
+ 
+.first-lines li .texto{
+    position: absolute;
+    margin-top: -20px;
+    top: 0;
+    opacity: 0;
+    transition: opacity 500ms; 
+ }
+ 
+ .texto{
+    height: 100%;
+ }
+ .first-lines li:hover .texto{
+    opacity: 1;
+    color: rgb(240, 240, 240);
+    
+ }
+
 li:hover{
     opacity: 1;
     box-shadow: #111 10px 10px;
