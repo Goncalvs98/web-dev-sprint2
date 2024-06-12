@@ -30,16 +30,16 @@ body, html{
     height: fit-content;
 }
 
-h1,h2,h3{
+h1,h3{
     display: block;
     text-align: center;
-    margin: 3rem;
     font-size: 40px;
 }
+
 p{
     display: block;
     text-align: center;
-    margin: 5rem;
+    margin: 0rem 5rem 5rem 5rem;
     font-size: 30px;
 }
 
@@ -49,6 +49,9 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(245, 222, 179, 0);
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
 }
 #apresentacao img{
     /* border-radius: 50%; */
@@ -136,6 +139,11 @@ p{
  
  .texto{
     height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    left: 0;
+    bottom: 0;
  }
  .first-lines li:hover .texto{
     opacity: 1;
@@ -149,9 +157,10 @@ li:hover{
 }
 li>h2{
     color: rgb(240, 240, 240);
-    font-size:  25px;
+    font-size:  20px;
     margin: 0;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 #funcionalidades{
@@ -170,6 +179,8 @@ li>h2{
 #form h2{
     font-size: 20px;
     margin-top: 0;
+    margin: auto;
+    text-align: center;
 }
 
 
@@ -221,4 +232,3 @@ li>h2{
     display: grid;
     gap: 2rem;
 }
-
