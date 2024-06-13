@@ -1,6 +1,22 @@
 # Advanced Programming & Mobile Dev - João Carlos Lima e Silva
     A segunda entrega consiste na criação de um site estático (landing page) para divulgação da solução proposta.
 
+---
+
+Daniel Okudaira Carapeto 						93180 
+
+Gabriel Gonçalves 							93069 
+
+Guilherme Peron Bortolleto 					93389 
+
+Greidimar Ferreira Lagares 					93827 
+
+João Vitor Martelleto de Oliveira 					96126 
+
+Renato Hwang Kim 							93343 
+
+---
+
 ## A página deve ter, no mínimo, os seguintes recursos:
 
 - Animação
