@@ -4,6 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+    let alertBox;
+    
+    function closeAlert() {
+        alertBox.classList.remove('show');
+        setTimeout(() => {
+        alertBox.style.display = 'none';
+        }, 500);
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const alertBtn = document.getElementById('sub');
+        alertBox = document.getElementById('alert-box');
+        const form = document.getElementById('form-inputs');
+    
+        // Hide the alert box by default
+        alertBox.style.display = 'none';
+    
+        alertBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent the form from submitting
+    
+        // Check if form inputs are filled
+        const inputs = form.querySelectorAll('input[required]');
+        let allFilled = true;
+        inputs.forEach((input) => {
+            if (input.value === '') {
+            allFilled = false;
+            }
+        });
+    
+        // Display the warning message conditionally
+        if (allFilled) {
+            alertBox.style.display = 'block';
+            alertBox.classList.add('show');
+            setTimeout(closeAlert, 3000);
+        }
+        });
+    });
+    </script>
     <title>StockFlux</title>
 </head>
 <body>
@@ -169,14 +208,19 @@
         <h1>Ficou interessado no nosso produto?</h1>
         <h2>Se inscreva na nossa Newsletter!</h2>
         
-    <div id="form-inputs">
-        <input type="text" placeholder="Nome">
-    <input type="text" placeholder="E-mail">
-    <button type="button">Inscrever</button>
-
-    </div>
+    <form id="form-inputs">
+        <input type="text" placeholder="Nome" required>
+        <input type="text" placeholder="E-mail"required>
+        <button type="submit" id="sub">Inscrever</button>
+    </form>
         
 
     </div>
+
+    <div class="alert" id="alert-box">
+        <span class="closebtn" onclick="closeAlert()" style="color: #fff;">&times;</span>
+        <p id="alert-msg">Obrigado por se inscrever!</p>
+    </div>
+    
 </body>
 </html>
