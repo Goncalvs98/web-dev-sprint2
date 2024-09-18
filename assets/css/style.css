@@ -140,32 +140,11 @@ p{
     transform: translateX(-50%); /* Ajusta a posição horizontal da imagem para que fique centralizada */
 }
 
-.first-lines li .texto{
-    position: absolute;
-    margin-top: -20px;
-    top: 0;
-    opacity: 0;
-    transition: opacity 500ms; 
-}
-
-.texto{
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 15px;
-    left: 0;
-    bottom: 0;
-}
-.first-lines li:hover .texto{
-    opacity: 1;
-    color: rgb(240, 240, 240);
-    
-}
-
 li:hover{
-    opacity: 1;
+    opacity: .5;
     box-shadow: #111 10px 10px;
 }
+
 li>h2{
     color: rgb(240, 240, 240);
     font-size:  20px;
@@ -229,6 +208,7 @@ li>h2{
     font-size: 15px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 #form input:focus{
     opacity: 1;
 }
@@ -255,15 +235,6 @@ li>h2{
 #form-inputs{
     display: grid;
     gap: 2rem;
-}
-
-#funcionalidades .first-lines li .texto{
-    margin-top: 5px;
-    font-size: 15px;
-}
-
-#funcionalidades .first-lines li .texto h2{
-    font-size: 25px;
 }
 
 
