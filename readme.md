@@ -1,4 +1,4 @@
-# Advanced Programming & Mobile Dev - João Carlos Lima e Silva
+# Advanced Programming & Mobile Dev
     A segunda entrega consiste na criação de um site estático (landing page) para divulgação da solução proposta.
 
 ---
