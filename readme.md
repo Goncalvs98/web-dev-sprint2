@@ -25,3 +25,10 @@ Renato Hwang Kim 							93343
 - Responsividade
 - Deve ser entregue um link do repositório GitHub e link da página publicada na web.
 ---
+
+## SPRINT 3
+
+Organizar o código separando HTML, CSS e JavaScript para melhor legibilidade.
+Implementar animações dinâmicas e modais para interação do usuário.
+Adicionar validação de formulários com feedback visual.
+Publicar o site e disponibilizar o código no GitHub.
