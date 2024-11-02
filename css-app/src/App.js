@@ -12,15 +12,13 @@ import integ from "./assets/img/integracao.jpg"
 import mov from  "./assets/img/movimentacoes.jpg"
 import pers from "./assets/img/personalizacao.jpg"
 import telaControle from "./controle.js"
-import { View, Text, Button, useRef, useContext } from 'react-native';
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
-
-function App({ navigation }) {
+function App() {
   return (
     <>
+    
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -69,21 +67,18 @@ function App({ navigation }) {
         <h1>Principais Funcionalidades:</h1>
         <ul className="first-lines">
           <li>
-          <NavLink to="./controle.js">
-          <Button
+            <button
               className="image btn"
+              href={telaControle}
             >
-              
               <img
                 src={controle}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
-          </NavLink>
-            
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalGestaoFornecedores"
@@ -92,10 +87,10 @@ function App({ navigation }) {
                 src={gestao}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalGestaoVendas"
@@ -104,10 +99,10 @@ function App({ navigation }) {
                 src={vendas}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalRastr"
@@ -116,10 +111,10 @@ function App({ navigation }) {
                 src={mov}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalAnalise"
@@ -128,10 +123,10 @@ function App({ navigation }) {
                 src={dados}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalInteg"
@@ -140,10 +135,10 @@ function App({ navigation }) {
                 src={integ}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalDash"
@@ -152,10 +147,10 @@ function App({ navigation }) {
                 src={dash}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalIA"
@@ -164,10 +159,10 @@ function App({ navigation }) {
                 src={tomada}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalAtualAuto"
@@ -176,10 +171,10 @@ function App({ navigation }) {
                 src={att}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalPersoArea"
@@ -188,10 +183,10 @@ function App({ navigation }) {
                 src={pers}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
           <li>
-            <Button
+            <button
               className="image btn"
               data-bs-toggle="modal"
               data-bs-target="#modalAlarmesNotific"
@@ -200,7 +195,7 @@ function App({ navigation }) {
                 src={alarme}
                 alt="Um armazém ou depósito, com prateleiras cheias de caixas e produtos."
               />
-            </Button>
+            </button>
           </li>
         </ul>
       </div>
@@ -217,8 +212,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalControleEstoqueLabel">
                 Controle de Estoque
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -245,8 +240,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalGestaoFornecedoresLabel">
                 Gestão de Fornecedores
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -273,8 +268,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalGestaoVendasLabel">
                 Planejamento de Compras
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -301,8 +296,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalRastrLabel">
                 Rastreamento de Movimentações
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -329,8 +324,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalAnaliseLabel">
                 Análise de Dados
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -358,8 +353,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalIntegLabel">
                 Integração com Sistemas Existentes
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -386,8 +381,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalDashLabel">
                 Dashboard Centralizado
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -414,8 +409,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalIALabel">
                 IA para Tomada de Decisão
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -442,8 +437,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalAtualAutoLabel">
                 Atualizações Automáticas
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -470,8 +465,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalPersoAreaLabel">
                 Personalização por Área
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -499,8 +494,8 @@ function App({ navigation }) {
               <h5 className="modal-title" id="modalAlarmesNotificLabel">
                 Alarmes e Notificações
               </h5>
-              <Button
-                type="Button"
+              <button
+                type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
@@ -523,14 +518,14 @@ function App({ navigation }) {
         <form id="form-inputs">
           <input type="text" placeholder="Nome" id="Nome" required="" />
           <input type="email" placeholder="E-mail" id="E-mail" required="" />
-          <Button
+          <button
             type="submit"
             id="sub"
-            className="Button btn btn-primary"
+            className="button btn btn-primary"
             data-bs-target="modalForm"
           >
             Inscrever
-          </Button>
+          </button>
         </form>
       </div>
     </section>
@@ -539,4 +534,12 @@ function App({ navigation }) {
   );
 }
 
+
 export default App;
+
+/*<BrowserRouter>
+<Routes>
+<Route path="/" element={<Home />} />
+<Route path="/controle" element={<controle/>} />
+</Routes>
+</BrowserRouter>*/

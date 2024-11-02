@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
-function App(){
+
+function Controle(){
     return (
     <div class="apresentacao">
         StockFlux oferece recursos avançados para o controle preciso do
@@ -10,4 +11,4 @@ function App(){
 
 )}
 
-export default App;
+export default Controle;
